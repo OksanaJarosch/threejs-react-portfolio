@@ -1,7 +1,7 @@
 import {myProjects} from "../constants/index.js";
-import React, {Suspense, useState} from "react";
+import {Suspense, useState} from "react";
 import {Canvas} from "@react-three/fiber";
-import {Center} from "@react-three/drei";
+import {Center, OrbitControls} from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import DemoComputer from "../components/DemoComputer.jsx";
 
@@ -26,7 +26,7 @@ const Projects = () => {
         <section className="c-space my-20">
             <p className="head-text">My Work</p>
 
-            <div className="lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
+            <div className="grid md:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
                 {/* First Part: info */}
                 <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
                     <div className="absolute top-0 right-0">
@@ -72,16 +72,18 @@ const Projects = () => {
                 {/* Second Part: canvas */}
                 <div className="border border-black-300 bg-black-200 rounded-lg md:h-full h-96">
                     <Canvas>
-                        <ambientLight intensity={1}/>
+                        <ambientLight intensity={Math.PI}/>
                         <directionalLight position={[10, 10, 5]}/>
 
                         <Center>
                             <Suspense fallback={<CanvasLoader/>}>
-                                <group scale={2} position={[0,0,0]} rotation={[0, -0.1, 0]}>
-                                    <DemoComputer />
+                                <group scale={2} position={[0,-2.5 ,0]} rotation={[0, -0.1, 0]}>
+                                    <DemoComputer texture={currentProject.texture}/>
                                 </group>
                             </Suspense>
                         </Center>
+
+                        <OrbitControls maxPolarAngle={Math.PI/2} enableZoom={false}/>
                     </Canvas>
                 </div>
             </div>
