@@ -7,7 +7,7 @@ const About = () => {
     const [hasCopied, setHasCopied] = useState(false);
 
     const handleCopy = () => {
-        navigator.clipboard.writeText('oksanajarosch@gmail.com');
+        navigator.clipboard.writeText('ok.jarosch@gmail.com');
 
         setHasCopied(true);
 
@@ -94,7 +94,7 @@ const About = () => {
 
                             <div className="copy-container" onClick={handleCopy}>
                                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy"/>
-                                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient">oksanajarosch@gmail.com</p>
+                                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient">ok.jarosch@gmail.com</p>
                             </div>
                         </div>
                     </div>
