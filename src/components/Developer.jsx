@@ -1,6 +1,7 @@
 import {useAnimations, useFBX, useGLTF} from '@react-three/drei'
 import {useEffect, useRef} from "react";
 
+// eslint-disable-next-line react/prop-types
 const Developer = ({animationName = 'idle', ...props}) => {
     const { nodes, materials } = useGLTF('/models/animations/dev-avatar.glb');
 
@@ -19,10 +20,10 @@ const Developer = ({animationName = 'idle', ...props}) => {
     const {actions} = useAnimations([idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0]], groupRef);
 
     useEffect(() => {
-        actions[animationName].reset().fadeIn(0.5).play();
+        actions[animationName]?.reset().fadeIn(0.5).play();
 
         return () => actions[animationName].fadeOut(0.5);
-    }, [animationName]);
+    }, [actions, animationName]);
 
     return (
         <group {...props} dispose={null} ref={groupRef}>

@@ -1,8 +1,6 @@
-import {Html, useProgress} from "@react-three/drei";
+import {Html} from "@react-three/drei";
 
-const CanvasLoader = () => {
-    const {progress} = useProgress();
-
+const CanvasLoader = ({ progress }) => {
     return (
         <Html
             as='div'

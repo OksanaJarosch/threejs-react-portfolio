@@ -1,13 +1,15 @@
 import {myProjects} from "../constants/index.js";
 import {Suspense, useState} from "react";
 import {Canvas} from "@react-three/fiber";
-import {Center, OrbitControls} from "@react-three/drei";
+import {Center, OrbitControls, useProgress} from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import DemoComputer from "../components/DemoComputer.jsx";
 
 const projectCount = myProjects.length;
 
 const Projects = () => {
+    const { progress } = useProgress();
+
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
     const currentProject = myProjects[selectedProjectIndex];
@@ -76,7 +78,7 @@ const Projects = () => {
                         <directionalLight position={[10, 10, 5]}/>
 
                         <Center>
-                            <Suspense fallback={<CanvasLoader/>}>
+                            <Suspense fallback={<CanvasLoader progress={progress}/>}>
                                 <group scale={2} position={[0,-2.5 ,0]} rotation={[0, -0.1, 0]}>
                                     <DemoComputer texture={currentProject.texture}/>
                                 </group>

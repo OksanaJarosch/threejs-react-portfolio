@@ -1,5 +1,5 @@
 import {Canvas} from "@react-three/fiber";
-import {PerspectiveCamera} from "@react-three/drei";
+import {PerspectiveCamera, useProgress} from "@react-three/drei";
 import HackerRoom from "../components/HackerRoom.jsx";
 import {Suspense} from "react";
 import CanvasLoader from "../components/CanvasLoader.jsx";
@@ -15,6 +15,7 @@ import Button from "../components/Button.jsx";
 
 
 const Hero = () => {
+    const { progress } = useProgress();
     // const controls = useControls(
     //     "HackerRoom", {
     //         positionX: {
@@ -81,7 +82,7 @@ const Hero = () => {
             <div className="w-full h-full absolute inset-0">
                 {/*<Leva/>*/}
                 <Canvas className="w-full h-full">
-                    <Suspense fallback={<CanvasLoader />}>
+                    <Suspense fallback={<CanvasLoader progress={progress}/>}>
                         <PerspectiveCamera makeDefault position={[0, 0, 30]}/>
                         <HeroCamera isMobile={isMobile}>
                             <HackerRoom
