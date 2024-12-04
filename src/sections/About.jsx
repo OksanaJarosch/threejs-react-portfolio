@@ -22,11 +22,11 @@ const About = () => {
 
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-                         <img src="/assets/grid1.png" alt="default photo" className="w-full sm:h-[276px] h-fit object-contain" />
+                        <img src="/assets/grid1.png" alt="default photo" className="w-full sm:h-[276px] h-fit object-contain" />
 
                         <div>
                             <p className="grid-headtext">
-                                Hi, I'm Oksana
+                                Hi, I&apos;m Oksana
                             </p>
                             <p className="grid-subtext">
                                 I have been coding for one year, during which I have honed my frontend skills, with a focus on animated 3D websites.
@@ -67,8 +67,10 @@ const About = () => {
 
                         <div>
                             <p className="grid-headtext">I work remotely</p>
-                            <p className="grid-subtext">I'm based in Germany, with remote work available.</p>
-                            <Button name="Contact Me" isBeam containerClass="w-full mt-10"></Button>
+                            <p className="grid-subtext">I am based in Germany, with remote work available.</p>
+                            <a href="#contact">
+                                <Button name="Contact Me" isBeam containerClass="w-full mt-10"></Button>
+                            </a>
                         </div>
                     </ div>
                 </div>
