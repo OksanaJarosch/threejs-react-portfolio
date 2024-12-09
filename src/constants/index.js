@@ -24,35 +24,20 @@ export const navLinks = [
 export const clientReviews = [
     {
         id: 1,
-        name: 'Emily Johnson',
-        position: 'Marketing Director at GreenLeaf',
-        img: 'assets/review1.png',
+        name: 'Anna Rachii',
+        position: 'Education Manager',
+        img: '',
         review:
-            'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
+            'Throughout our time together at GoIT School of Programming, Oksana consistently demonstrated exceptional diligence, meeting deadlines with precision. Her dedication to learning is evident in her outstanding performance during lessons, where she not only grasps complex concepts swiftly but also contributes valuable insights that enrich the entire learning environment. Oksana\'s proactive approach to problem-solving and her keen analytical skills make her a standout student. She tackles challenges with enthusiasm, displaying a genuine passion for programming. Her ability to absorb new information and apply it practically is truly commendable.\n',
+            
     },
     {
         id: 2,
-        name: 'Mark Rogers',
-        position: 'Founder of TechGear Shop',
-        img: 'assets/review2.png',
+        name: 'Olesia Kocherha',
+        position: 'Full Stack Developer',
+        img: '',
         review:
-            'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-    },
-    {
-        id: 3,
-        name: 'John Dohsas',
-        position: 'Project Manager at UrbanTech ',
-        img: 'assets/review3.png',
-        review:
-            'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-    },
-    {
-        id: 4,
-        name: 'Ether Smith',
-        position: 'CEO of BrightStar Enterprises',
-        img: 'assets/review4.png',
-        review:
-            'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
+            'I was lucky to work with Oksana on two projects. She demonstrated herself as a very highly qualified specialist. Oksana is a very pleasant person. In our projects, she not only effectively performed her tasks, but also successfully assisted other colleagues. This allowed us to complete the project on time. Oksana has technical knowledge and the ability to actively learn and improve her skills. Her self-confidence and problem-solving skills make her a valuable asset to any project.',
     },
 ];
 
