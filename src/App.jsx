@@ -5,9 +5,38 @@ import Projects from "./sections/Projects.jsx";
 import Clients from "./sections/Clients.jsx";
 import Contact from "./sections/Contact.jsx";
 import Footer from "./sections/Footer.jsx";
-import Experience from "./sections/Experience.jsx";
+import { useState } from "react";
+import Modal from "./components/Modal.jsx";
+// import Experience from "./sections/Experience.jsx";
 
 const App = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalContent, setModalContent] = useState('');
+
+    const openModal = (type) => {
+        if (type === 'impressum') {
+            setModalContent(
+                <div>
+                    <h2 className="text-lg font-bold mb-5">In Bearbeitung...</h2>
+                    <p>An dieser Stelle wird das Impressum stehen.</p>
+                </div>
+            );
+        } else if (type === 'datenschutz') {
+            setModalContent(
+                <div>
+                    <h2 className="text-lg font-bold mb-5">In Bearbeitung...</h2>
+                    <p>Datenschutzerklärung wird hier eingefügt.</p>
+                </div>
+            );
+        }
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setModalContent('');
+    };
+    
     return (
         <main className="max-w-7xl mx-auto">
             <Navbar />
@@ -15,9 +44,12 @@ const App = () => {
             <About />
             <Projects />
             <Clients />
-            <Experience />
+            {/* <Experience /> */}
             <Contact />
-            <Footer />
+            <Footer openModal={openModal}/>
+
+            {isModalOpen && (<Modal isOpen={isModalOpen} onClose={closeModal} content={modalContent}/>)}
+            
         </main>
     )
 };
