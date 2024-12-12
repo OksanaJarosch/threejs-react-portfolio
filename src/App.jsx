@@ -7,6 +7,7 @@ import Contact from "./sections/Contact.jsx";
 import Footer from "./sections/Footer.jsx";
 import { useState } from "react";
 import Modal from "./components/Modal.jsx";
+import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
 // import Experience from "./sections/Experience.jsx";
 
 const App = () => {
@@ -23,10 +24,7 @@ const App = () => {
             );
         } else if (type === 'datenschutz') {
             setModalContent(
-                <div>
-                    <h2 className="text-lg font-bold mb-5">In Bearbeitung...</h2>
-                    <p>Datenschutzerklärung wird hier eingefügt.</p>
-                </div>
+                <PrivacyPolicy />
             );
         }
         setIsModalOpen(true);

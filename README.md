@@ -38,8 +38,7 @@ This project utilizes the following technologies and frameworks:
 - **Immersive Hero**: An interactive 3D hacker room that reacts to mouse movements.
 - **Interactive About Me**: A bento grid layout featuring personal information, an interactive 3D globe and a handy email copy feature.
 - **Dynamic Project Showcase**: View live project demos within a 3D computer model and seamlessly switch between projects.
-- **Experience Timeline**: Interactive 3D animations triggered when hovering over career milestones.
-- **Client Testimonials**: A dedicated section highlighting client feedback.
+- **Testimonials**: A dedicated section highlighting feedback.
 - **Easy Contact Form**: A user-friendly form for direct communication.
 - **Clean Footer**: A minimalist design with social media links.
 - **Fully Responsive**: Optimized for all devices, from desktops to mobile.
@@ -90,10 +89,9 @@ Das Projekt nutzt folgende Technologien und Frameworks:
 - **Immersive Hero**: Ein interaktiver 3D-Hackerraum, der auf Mausbewegungen reagiert.
 - **Interactive About Me**: Ein Bento-Grid-Layout mit persönlichen Infos, einer interaktiven 3D-Weltkugel und einer praktischen E-Mail-Kopie-Funktion.
 - **Dynamic Project Showcase**: Projekte live in einem 3D-Computermodell anschauen und zwischen Projekten wechseln.
-- **Engaging Experience Timeline**: Interaktive 3D-Animationen beim Hovern über Karrieremeilensteine.
-- **Client Testimonials**: Eine eigene Sektion mit Kundenfeedback.
+- **Testimonials**: Eine eigene Sektion mit Feedback.
 - **Easy Contact Form**: Ein nutzerfreundliches Formular für direkte Kontaktaufnahme.
-- **Clean Footer**: Minimalistisches Design mit Social-Media-Links.
+- **Clean Footer**: Minimalistisches Design mit Social-Media-Links und Datenschutzhinweisen.
 - **Fully Responsive**: Optimierte Darstellung auf allen Geräten, von Desktop bis Mobile.
 
 ---

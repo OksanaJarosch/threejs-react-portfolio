@@ -1,5 +1,5 @@
 import {useRef, useState} from "react";
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const formRef = useRef();
@@ -17,23 +17,31 @@ const Contact = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         setLoading(true);
+        alert('This form is not connected to any provider or service');
+        setForm({
+            name: '',
+            email: '',
+            message: ''
+        });
+        setLoading(false);
 
         // ToDo add .env with ID's
-        try {
-            await emailjs.send('', ' ', {from_name: form.name, to_name: 'Oksana', from_email: form.email, to_email: 'ok.jarosch@gmail.com', message: form.message}, ' ');
+        // setLoading(true);
+        // try {
+        //     await emailjs.send('', ' ', {from_name: form.name, to_name: 'Oksana', from_email: form.email, to_email: 'ok.jarosch@gmail.com', message: form.message}, ' ');
 
-            setLoading(false);
-            setForm({
-                name: '',
-                email: '',
-                message: ''
-            });
-            alert('Your message has been sent');
-        } catch (error) {
-            setLoading(false);
-            console.error(error);
-            alert('Something went wrong');
-        }
+        //     setLoading(false);
+        //     setForm({
+        //         name: '',
+        //         email: '',
+        //         message: ''
+        //     });
+        //     alert('Your message has been sent');
+        // } catch (error) {
+        //     setLoading(false);
+        //     console.error(error);
+        //     alert('Something went wrong');
+        // }
     };
 
     return (
@@ -83,7 +91,7 @@ const Contact = () => {
                                 required
                                 rows={5}
                                 className="field-input"
-                                placeholder="Hi, I'm interested in ..."
+                                placeholder="This form is solely for demonstrating my skills in frontend development. It is not connected to any provider or service, so any data entered is neither processed nor forwarded."
                             />
                         </label>
 

@@ -3,15 +3,15 @@ const Footer = ({openModal}) => {
     return (
         <section className="c-space pt-7 pb-3 border-t border-black-300 flex justify-between items-center flex-wrap gap-5">
             <div className="text-white-500 flex gap-2">
-                <a href="#" onClick={(e) => {
+                {/* <a href="#" onClick={(e) => {
                     e.preventDefault(); //no scrollen to top
                     openModal('impressum')
                 }}>Impressum</a>
-                <p>|</p>
+                <p>|</p> */}
                 <a href="#" onClick={(e) => {
                     e.preventDefault();
                     openModal('datenschutz');
-                } }>Datenschutzerklärung</a>
+                } }>Datenschutzhinweise</a>
             </div>
 
             <div className="flex gap-3">
