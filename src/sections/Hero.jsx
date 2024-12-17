@@ -1,5 +1,5 @@
 import {Canvas} from "@react-three/fiber";
-import {OrbitControls, PerspectiveCamera, useProgress} from "@react-three/drei";
+import {PerspectiveCamera, useProgress} from "@react-three/drei";
 import HackerRoom from "../components/HackerRoom.jsx";
 import {Suspense} from "react";
 import CanvasLoader from "../components/CanvasLoader.jsx";
@@ -104,8 +104,6 @@ const Hero = () => {
 
                         <ambientLight intensity={1}/>
                         <directionalLight position={[10, 10, 10]} intensity={0.5} />
-                        
-                        <OrbitControls maxPolarAngle={Math.PI/2} enableZoom={false}/>
                     </Suspense>
                 </Canvas>
             </div>

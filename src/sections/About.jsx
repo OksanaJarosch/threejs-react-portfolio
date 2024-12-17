@@ -1,10 +1,13 @@
 import Globe from "react-globe.gl";
 import Button from "../components/Button.jsx";
 import {useState} from "react";
+import { useMediaQuery } from "react-responsive";
 
 
 const About = () => {
     const [hasCopied, setHasCopied] = useState(false);
+
+    const isSmall = useMediaQuery({maxWidth: 440});
 
     const handleCopy = () => {
         navigator.clipboard.writeText('ok.jarosch@gmail.com');
@@ -22,7 +25,10 @@ const About = () => {
 
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container relative">
-                        <img src="/assets/first_grid.png" alt="default photo" className="absolute left-0 top-0 w-full sm:h-[276px] h-fit object-contain p-4" />
+                        {!isSmall && (
+                            <img src="/assets/first_grid.png" alt="default photo" className="absolute left-0 top-0 w-full sm:h-[276px] h-fit object-contain p-4" />
+                        )}
+                        
                         <img src="/assets/my_photo.png" alt="developer photo" className="relative z-10 w-full sm:h-[276px] h-fit object-contain" />
                         <div>
                             <p className="grid-headtext">
