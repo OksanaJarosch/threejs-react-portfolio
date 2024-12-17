@@ -22,9 +22,8 @@ const About = () => {
 
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container relative">
-                        <img src="/assets/first_grid.png" alt="default photo" className="absolute left-0 w-full sm:h-[276px] h-fit object-contain" />
-                        <img src="/assets/my_photo.png" alt="developer photo" className="  relative z-10 w-full sm:h-[276px] h-fit object-contain" />
-
+                        <img src="/assets/first_grid.png" alt="default photo" className="absolute left-0 top-0 w-full sm:h-[276px] h-fit object-contain p-4" />
+                        <img src="/assets/my_photo.png" alt="developer photo" className="relative z-10 w-full sm:h-[276px] h-fit object-contain" />
                         <div>
                             <p className="grid-headtext">
                                 Hi, I&apos;m Oksana
@@ -89,8 +88,8 @@ const About = () => {
 
 
                 <div className="col-span-1 xl:row-span-2">
-                    <div className="grid-container">
-                        <img src="/assets/grid4.png" alt="numbers" className="w-full md:h-[196px] sm:h-[276px] h-fit object-cover sm:object-top"/>
+                    <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col">
+                        <img src="/assets/grid4.png" alt="numbers" className="w-full h-[196px] object-cover object-top"/>
 
                         <div className="space-y-2">
                             <p className="grid-subtext text-center">Contact me</p>

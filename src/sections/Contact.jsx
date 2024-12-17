@@ -48,11 +48,11 @@ const Contact = () => {
         <section id="contact" className="c-space my-20">
             {/*<h3 className="head-text">Contact Me</h3>*/}
 
-            <div className="relative min-h-screen flex items-center justify-center flex-col">
-                <div className="absolute inset-0 min-h-screen bg-black-200 rounded-lg"></div>
+            <div className="relative flex items-center justify-center flex-col">
+                <div className="absolute inset-0 bg-black-200 rounded-lg"></div>
                 {/*<img src="/assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen"/>*/}
 
-                <div className="contact-container">
+                <div className="contact-container md:py-10 py-5">
                     <h3 className="head-text">Let&apos;s talk</h3>
                     <p className="text-lg text-white-600 mt-3">Whether you&apos;re looking to build a new website, improve your existing platform,or bring a unique project to life, I&apos;m here to help.</p>
                     <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
